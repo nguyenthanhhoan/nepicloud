@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{9DCDC212-8F28-4B14-A969-B54639EE1585}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{EB72AD6F-0DD6-430F-A319-C69084B55463}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NPEICloud.PublicWeb", "src\NPEICloud.PublicWeb\NPEICloud.PublicWeb.csproj", "{0BC625B3-6020-47BB-92FD-87C6970B9447}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NPEICloud.CatalogService.HttpApi.Client", "..\..\services\catalog\src\NPEICloud.CatalogService.HttpApi.Client\NPEICloud.CatalogService.HttpApi.Client.csproj", "{F786FB01-220E-4B1A-8CE4-D12E0E72CF11}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NPEICloud.CmskitService.HttpApi.Client", "..\..\services\cmskit\src\NPEICloud.CmskitService.HttpApi.Client\NPEICloud.CmskitService.HttpApi.Client.csproj", "{BC5865D1-BD82-481A-84F9-3DC983BE0700}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NPEICloud.OrderingService.HttpApi.Client", "..\..\services\ordering\src\NPEICloud.OrderingService.HttpApi.Client\NPEICloud.OrderingService.HttpApi.Client.csproj", "{EA7CB24C-5A03-49E2-81A1-435F9373B6DD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NPEICloud.PaymentService.HttpApi.Client", "..\..\services\payment\src\NPEICloud.PaymentService.HttpApi.Client\NPEICloud.PaymentService.HttpApi.Client.csproj", "{12E45921-0026-4B5F-82D7-C8D2D05906F3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0BC625B3-6020-47BB-92FD-87C6970B9447}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BC625B3-6020-47BB-92FD-87C6970B9447}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BC625B3-6020-47BB-92FD-87C6970B9447}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BC625B3-6020-47BB-92FD-87C6970B9447}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F786FB01-220E-4B1A-8CE4-D12E0E72CF11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F786FB01-220E-4B1A-8CE4-D12E0E72CF11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F786FB01-220E-4B1A-8CE4-D12E0E72CF11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F786FB01-220E-4B1A-8CE4-D12E0E72CF11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC5865D1-BD82-481A-84F9-3DC983BE0700}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC5865D1-BD82-481A-84F9-3DC983BE0700}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC5865D1-BD82-481A-84F9-3DC983BE0700}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC5865D1-BD82-481A-84F9-3DC983BE0700}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA7CB24C-5A03-49E2-81A1-435F9373B6DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA7CB24C-5A03-49E2-81A1-435F9373B6DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA7CB24C-5A03-49E2-81A1-435F9373B6DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA7CB24C-5A03-49E2-81A1-435F9373B6DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12E45921-0026-4B5F-82D7-C8D2D05906F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12E45921-0026-4B5F-82D7-C8D2D05906F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12E45921-0026-4B5F-82D7-C8D2D05906F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12E45921-0026-4B5F-82D7-C8D2D05906F3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0BC625B3-6020-47BB-92FD-87C6970B9447} = {9DCDC212-8F28-4B14-A969-B54639EE1585}
+		{F786FB01-220E-4B1A-8CE4-D12E0E72CF11} = {9DCDC212-8F28-4B14-A969-B54639EE1585}
+		{BC5865D1-BD82-481A-84F9-3DC983BE0700} = {9DCDC212-8F28-4B14-A969-B54639EE1585}
+		{EA7CB24C-5A03-49E2-81A1-435F9373B6DD} = {9DCDC212-8F28-4B14-A969-B54639EE1585}
+		{12E45921-0026-4B5F-82D7-C8D2D05906F3} = {9DCDC212-8F28-4B14-A969-B54639EE1585}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8B26E1A3-FA45-4BCF-BAFF-0074BEBFA201}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <RootNamespace>NPEICloud.CatalogService</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.11.0" />
+    <PackageReference Include="Mongo2Go" Version="3.1.3" />
+    <ProjectReference Include="..\..\src\NPEICloud.CatalogService.MongoDB\NPEICloud.CatalogService.MongoDB.csproj" />
+    <ProjectReference Include="..\NPEICloud.CatalogService.TestBase\NPEICloud.CatalogService.TestBase.csproj" />
+  </ItemGroup>
+
+</Project>

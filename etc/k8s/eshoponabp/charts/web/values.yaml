@@ -1,0 +1,18 @@
+config:
+  selfUrl: https://admin.NPEICloud.com
+  gatewayUrl: https://www.gateway.NPEICloud.com/
+  authServer:
+    authority: https://auth.NPEICloud.com
+    requireHttpsMetadata: "false"
+    responseType: "code"
+ingress:
+  host: eshop-st-web
+  tlsSecret: eshop-wildcard-tls
+
+image:
+  repository: NPEICloud/app-web
+  tag: latest
+  pullPolicy: IfNotPresent
+
+# Extra environment variables or configurations
+env: {}

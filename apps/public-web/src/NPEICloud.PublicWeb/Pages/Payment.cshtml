@@ -1,0 +1,17 @@
+﻿@page
+@using NPEICloud.Localization
+@using NPEICloud.PublicWeb.Components.Payment
+@using Microsoft.Extensions.Localization
+@model NPEICloud.PublicWeb.Pages.PaymentModel
+
+@inject IStringLocalizer<NPEICloudResource> L
+
+@section scripts {
+    <abp-script src="/Pages/payment.js"/>
+}
+
+<div class="row">
+    <div id="PaymentArea">
+        @await Component.InvokeAsync(typeof(PaymentWidgetViewComponent))
+    </div>
+</div>

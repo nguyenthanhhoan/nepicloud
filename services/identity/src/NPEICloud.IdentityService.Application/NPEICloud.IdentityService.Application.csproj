@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <RootNamespace>NPEICloud.IdentityService</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\NPEICloud.IdentityService.Domain\NPEICloud.IdentityService.Domain.csproj" />
+        <ProjectReference Include="..\NPEICloud.IdentityService.Application.Contracts\NPEICloud.IdentityService.Application.Contracts.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Volo.Abp.Identity.Application" Version="7.0.0" />
+    </ItemGroup>
+
+</Project>

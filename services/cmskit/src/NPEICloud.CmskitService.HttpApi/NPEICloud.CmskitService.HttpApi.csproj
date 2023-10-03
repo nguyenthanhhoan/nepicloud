@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <RootNamespace>NPEICloud.CmskitService</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.AspNetCore.Mvc" Version="7.0.0" />
+    <PackageReference Include="Volo.CmsKit.HttpApi" Version="7.0.0" />
+    <ProjectReference Include="..\NPEICloud.CmskitService.Application.Contracts\NPEICloud.CmskitService.Application.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>

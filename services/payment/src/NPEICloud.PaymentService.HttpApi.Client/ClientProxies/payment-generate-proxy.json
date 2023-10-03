@@ -1,0 +1,258 @@
+{
+  "modules": {
+    "payment": {
+      "rootPath": "payment",
+      "remoteServiceName": "PaymentService",
+      "controllers": {
+        "NPEICloud.PaymentService.Controllers.PaymentMethodController": {
+          "controllerName": "PaymentMethod",
+          "controllerGroupName": "PaymentMethod",
+          "type": "NPEICloud.PaymentService.Controllers.PaymentMethodController",
+          "interfaces": [
+            {
+              "type": "NPEICloud.PaymentService.PaymentMethods.IPaymentMethodAppService"
+            }
+          ],
+          "actions": {
+            "GetListAsync": {
+              "uniqueName": "GetListAsync",
+              "name": "GetListAsync",
+              "httpMethod": "GET",
+              "url": "api/payment/methods",
+              "supportedVersions": [],
+              "parametersOnMethod": [],
+              "parameters": [],
+              "returnValue": {
+                "type": "System.Collections.Generic.List<NPEICloud.PaymentService.PaymentMethods.PaymentMethodDto>",
+                "typeSimple": "[NPEICloud.PaymentService.PaymentMethods.PaymentMethodDto]"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "NPEICloud.PaymentService.PaymentMethods.IPaymentMethodAppService"
+            }
+          }
+        },
+        "NPEICloud.PaymentService.Controllers.PaymentRequestController": {
+          "controllerName": "PaymentRequest",
+          "controllerGroupName": "PaymentRequest",
+          "type": "NPEICloud.PaymentService.Controllers.PaymentRequestController",
+          "interfaces": [
+            {
+              "type": "NPEICloud.PaymentService.PaymentRequests.IPaymentRequestAppService"
+            }
+          ],
+          "actions": {
+            "CompleteAsyncByPaymentMethodAndInput": {
+              "uniqueName": "CompleteAsyncByPaymentMethodAndInput",
+              "name": "CompleteAsync",
+              "httpMethod": "POST",
+              "url": "api/payment/requests/{paymentMethod}/complete",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "paymentMethod",
+                  "typeAsString": "System.String, System.Private.CoreLib",
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                },
+                {
+                  "name": "input",
+                  "typeAsString": "NPEICloud.PaymentService.PaymentRequests.PaymentRequestCompleteInputDto, NPEICloud.PaymentService.Application.Contracts",
+                  "type": "NPEICloud.PaymentService.PaymentRequests.PaymentRequestCompleteInputDto",
+                  "typeSimple": "NPEICloud.PaymentService.PaymentRequests.PaymentRequestCompleteInputDto",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "paymentMethod",
+                  "name": "paymentMethod",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "input",
+                  "jsonName": null,
+                  "type": "NPEICloud.PaymentService.PaymentRequests.PaymentRequestCompleteInputDto",
+                  "typeSimple": "NPEICloud.PaymentService.PaymentRequests.PaymentRequestCompleteInputDto",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Body",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "NPEICloud.PaymentService.PaymentRequests.PaymentRequestDto",
+                "typeSimple": "NPEICloud.PaymentService.PaymentRequests.PaymentRequestDto"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "NPEICloud.PaymentService.PaymentRequests.IPaymentRequestAppService"
+            },
+            "CreateAsyncByInput": {
+              "uniqueName": "CreateAsyncByInput",
+              "name": "CreateAsync",
+              "httpMethod": "POST",
+              "url": "api/payment/requests",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "NPEICloud.PaymentService.PaymentRequests.PaymentRequestCreationDto, NPEICloud.PaymentService.Application.Contracts",
+                  "type": "NPEICloud.PaymentService.PaymentRequests.PaymentRequestCreationDto",
+                  "typeSimple": "NPEICloud.PaymentService.PaymentRequests.PaymentRequestCreationDto",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "input",
+                  "jsonName": null,
+                  "type": "NPEICloud.PaymentService.PaymentRequests.PaymentRequestCreationDto",
+                  "typeSimple": "NPEICloud.PaymentService.PaymentRequests.PaymentRequestCreationDto",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Body",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "NPEICloud.PaymentService.PaymentRequests.PaymentRequestDto",
+                "typeSimple": "NPEICloud.PaymentService.PaymentRequests.PaymentRequestDto"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "NPEICloud.PaymentService.PaymentRequests.IPaymentRequestAppService"
+            },
+            "HandleWebhookAsyncByPaymentMethodAndPayload": {
+              "uniqueName": "HandleWebhookAsyncByPaymentMethodAndPayload",
+              "name": "HandleWebhookAsync",
+              "httpMethod": "POST",
+              "url": "api/payment/requests/{paymentMethod}/webhook",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "paymentMethod",
+                  "typeAsString": "System.String, System.Private.CoreLib",
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                },
+                {
+                  "name": "payload",
+                  "typeAsString": "System.String, System.Private.CoreLib",
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "paymentMethod",
+                  "name": "paymentMethod",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                },
+                {
+                  "nameOnMethod": "payload",
+                  "name": "payload",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "System.Boolean",
+                "typeSimple": "boolean"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "NPEICloud.PaymentService.PaymentRequests.IPaymentRequestAppService"
+            },
+            "StartAsyncByPaymentMethodAndInput": {
+              "uniqueName": "StartAsyncByPaymentMethodAndInput",
+              "name": "StartAsync",
+              "httpMethod": "POST",
+              "url": "api/payment/requests/{paymentMethod}/start",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "paymentMethod",
+                  "typeAsString": "System.String, System.Private.CoreLib",
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                },
+                {
+                  "name": "input",
+                  "typeAsString": "NPEICloud.PaymentService.PaymentRequests.PaymentRequestStartDto, NPEICloud.PaymentService.Application.Contracts",
+                  "type": "NPEICloud.PaymentService.PaymentRequests.PaymentRequestStartDto",
+                  "typeSimple": "NPEICloud.PaymentService.PaymentRequests.PaymentRequestStartDto",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "paymentMethod",
+                  "name": "paymentMethod",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "input",
+                  "jsonName": null,
+                  "type": "NPEICloud.PaymentService.PaymentRequests.PaymentRequestStartDto",
+                  "typeSimple": "NPEICloud.PaymentService.PaymentRequests.PaymentRequestStartDto",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Body",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "NPEICloud.PaymentService.PaymentRequests.PaymentRequestStartResultDto",
+                "typeSimple": "NPEICloud.PaymentService.PaymentRequests.PaymentRequestStartResultDto"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "NPEICloud.PaymentService.PaymentRequests.IPaymentRequestAppService"
+            }
+          }
+        }
+      }
+    }
+  },
+  "types": {}
+}

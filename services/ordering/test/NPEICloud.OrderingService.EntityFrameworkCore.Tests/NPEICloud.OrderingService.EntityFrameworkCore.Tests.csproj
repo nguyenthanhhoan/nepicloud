@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <RootNamespace>NPEICloud.OrderingService</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.11.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="7.0.0" />
+    <ProjectReference Include="..\..\src\NPEICloud.OrderingService.EntityFrameworkCore\NPEICloud.OrderingService.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\NPEICloud.OrderingService.TestBase\NPEICloud.OrderingService.TestBase.csproj" />
+    <PackageReference Include="Volo.Abp.EntityFrameworkCore.Sqlite" Version="7.0.0" />
+  </ItemGroup>
+
+</Project>

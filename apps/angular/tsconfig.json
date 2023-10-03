@@ -1,0 +1,46 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "ES2022",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2018",
+      "dom"
+    ],
+    "paths": {
+      "@NPEICloud/catalog/config": [
+        "node_modules/@NPEICloud/catalog/config",
+        "projects/catalog/config/src/public-api.ts"
+      ],
+      "@NPEICloud/catalog": [
+        "node_modules/@NPEICloud/catalog",
+        "projects/catalog/src/public-api.ts"
+      ],
+      "@NPEICloud/ordering/config": [
+        "node_modules/@NPEICloud/ordering/config",
+        "projects/ordering/config/src/public-api.ts"
+      ],
+      "@NPEICloud/ordering": [
+        "node_modules/@NPEICloud/ordering",
+        "projects/ordering/src/public-api.ts"
+      ]
+    },
+    "useDefineForClassFields": false
+  },
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true,
+    "enableIvy": true
+  }
+}

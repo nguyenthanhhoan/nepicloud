@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <RootNamespace>NPEICloud.AdministrationService</RootNamespace>
+    <PreserveCompilationReferences>true</PreserveCompilationReferences>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.1">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.Http.Client.IdentityModel.Web" Version="7.0.0" />
+    <PackageReference Include="Volo.Abp.Identity.HttpApi.Client" Version="7.0.0" />
+    <PackageReference Include="Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NPEICloud.AdministrationService.EntityFrameworkCore\NPEICloud.AdministrationService.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\NPEICloud.AdministrationService.Application\NPEICloud.AdministrationService.Application.csproj" />
+    <ProjectReference Include="..\NPEICloud.AdministrationService.HttpApi\NPEICloud.AdministrationService.HttpApi.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\shared\NPEICloud.Shared.Hosting.Microservices\NPEICloud.Shared.Hosting.Microservices.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Logs\**" />
+    <Content Remove="Logs\**" />
+    <EmbeddedResource Remove="Logs\**" />
+    <None Remove="Logs\**" />
+  </ItemGroup>
+
+</Project>

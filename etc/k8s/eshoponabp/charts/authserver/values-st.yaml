@@ -1,0 +1,20 @@
+config:
+  selfUrl: https://demomicro-st-authserver.NPEICloud.com   
+  corsOrigins: https://demomicro-st-gateway.NPEICloud.com,https://demomicro-st-gateway-public.NPEICloud.com,https://demomicro-st-identity.NPEICloud.com,https://demomicro-st-administration.NPEICloud.com,https://demomicro-st-basket.NPEICloud.com,https://demomicro-st-catalog.NPEICloud.com,https://demomicro-st-order.NPEICloud.com,https://demomicro-st-cmskit.NPEICloud.com,https://demomicro-st-payment.NPEICloud.com,https://demomicro-st-admin.NPEICloud.com,https://demomicro-st-NPEICloud.com
+  allowedRedirectUrls: https://demomicro-st-admin.NPEICloud.com
+  authServer:
+    authority: https://demomicro-st-authserver.NPEICloud.com
+    requireHttpsMetadata: "false"
+  connectionStrings:
+    administrationService: "Host=postgresdb-postgresdb;Port=5432;Database=NPEICloud_Administration;User ID=postgres;password=myPassw0rd;Pooling=false"
+    identityService: "Host=postgresdb-postgresdb;Port=5432;Database=NPEICloud_Identity;User ID=postgres;password=myPassw0rd;Pooling=false"
+  dotnetEnv: Production
+  redisHost: redis-redis
+  rabbitmqHost: rabbitmq-rabbitmq
+  elasticsearchHost: elasticsearch-elasticsearch
+ingress:
+  host: demomicro-st-authserver.NPEICloud.com
+  tlsSecret: eshop-wildcard-tls
+image:
+  repository: "volocr.azurecr.io/demomicro/app-authserver"
+  tag: 1.0.1

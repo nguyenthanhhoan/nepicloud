@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>NPEICloud.AdministrationService</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NPEICloud.AdministrationService.Domain.Shared\NPEICloud.AdministrationService.Domain.Shared.csproj" />
+    <ProjectReference Include="..\..\..\catalog\src\NPEICloud.CatalogService.Application.Contracts\NPEICloud.CatalogService.Application.Contracts.csproj" />
+    <ProjectReference Include="..\..\..\ordering\src\NPEICloud.OrderingService.Application.Contracts\NPEICloud.OrderingService.Application.Contracts.csproj" />
+    <ProjectReference Include="..\..\..\cmskit\src\NPEICloud.CmskitService.Application.Contracts\NPEICloud.CmskitService.Application.Contracts.csproj" />
+
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.PermissionManagement.Application.Contracts" Version="7.0.0" />
+    <PackageReference Include="Volo.Abp.SettingManagement.Application.Contracts" Version="7.0.0" />
+    
+  </ItemGroup>
+
+</Project>

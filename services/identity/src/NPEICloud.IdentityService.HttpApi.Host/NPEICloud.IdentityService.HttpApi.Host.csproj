@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <RootNamespace>NPEICloud.IdentityService</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.1">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\shared\NPEICloud.Shared.Hosting.Gateways\NPEICloud.Shared.Hosting.Gateways.csproj" />
+    <ProjectReference Include="..\..\..\..\shared\NPEICloud.Shared.Hosting.Microservices\NPEICloud.Shared.Hosting.Microservices.csproj" />
+    <ProjectReference Include="..\NPEICloud.IdentityService.Application\NPEICloud.IdentityService.Application.csproj" />
+    <ProjectReference Include="..\NPEICloud.IdentityService.EntityFrameworkCore\NPEICloud.IdentityService.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\NPEICloud.IdentityService.HttpApi\NPEICloud.IdentityService.HttpApi.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Logs\**" />
+    <Content Remove="Logs\**" />
+    <EmbeddedResource Remove="Logs\**" />
+    <None Remove="Logs\**" />
+  </ItemGroup>
+  
+</Project>

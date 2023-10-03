@@ -1,0 +1,389 @@
+{
+  "modules": {
+    "ordering": {
+      "rootPath": "ordering",
+      "remoteServiceName": "Ordering",
+      "controllers": {
+        "NPEICloud.OrderingService.Orders.OrderAppService": {
+          "controllerName": "Order",
+          "controllerGroupName": "Order",
+          "type": "NPEICloud.OrderingService.Orders.OrderAppService",
+          "interfaces": [
+            {
+              "type": "Volo.Abp.Validation.IValidationEnabled"
+            },
+            {
+              "type": "Volo.Abp.Auditing.IAuditingEnabled"
+            },
+            {
+              "type": "Volo.Abp.GlobalFeatures.IGlobalFeatureCheckingEnabled"
+            },
+            {
+              "type": "NPEICloud.OrderingService.Orders.IOrderAppService"
+            }
+          ],
+          "actions": {
+            "GetAsyncById": {
+              "uniqueName": "GetAsyncById",
+              "name": "GetAsync",
+              "httpMethod": "GET",
+              "url": "api/ordering/order/{id}",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "id",
+                  "typeAsString": "System.Guid, System.Private.CoreLib",
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "id",
+                  "name": "id",
+                  "jsonName": null,
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "NPEICloud.OrderingService.Orders.OrderDto",
+                "typeSimple": "NPEICloud.OrderingService.Orders.OrderDto"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "NPEICloud.OrderingService.Orders.IOrderAppService"
+            },
+            "GetMyOrdersAsyncByInput": {
+              "uniqueName": "GetMyOrdersAsyncByInput",
+              "name": "GetMyOrdersAsync",
+              "httpMethod": "GET",
+              "url": "api/ordering/order/my-orders",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "NPEICloud.OrderingService.Orders.GetMyOrdersInput, NPEICloud.OrderingService.Application.Contracts",
+                  "type": "NPEICloud.OrderingService.Orders.GetMyOrdersInput",
+                  "typeSimple": "NPEICloud.OrderingService.Orders.GetMyOrdersInput",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "Filter",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                }
+              ],
+              "returnValue": {
+                "type": "System.Collections.Generic.List<NPEICloud.OrderingService.Orders.OrderDto>",
+                "typeSimple": "[NPEICloud.OrderingService.Orders.OrderDto]"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "NPEICloud.OrderingService.Orders.IOrderAppService"
+            },
+            "GetOrdersAsyncByInput": {
+              "uniqueName": "GetOrdersAsyncByInput",
+              "name": "GetOrdersAsync",
+              "httpMethod": "GET",
+              "url": "api/ordering/order/orders",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "NPEICloud.OrderingService.Orders.GetOrdersInput, NPEICloud.OrderingService.Application.Contracts",
+                  "type": "NPEICloud.OrderingService.Orders.GetOrdersInput",
+                  "typeSimple": "NPEICloud.OrderingService.Orders.GetOrdersInput",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "Filter",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                }
+              ],
+              "returnValue": {
+                "type": "System.Collections.Generic.List<NPEICloud.OrderingService.Orders.OrderDto>",
+                "typeSimple": "[NPEICloud.OrderingService.Orders.OrderDto]"
+              },
+              "allowAnonymous": false,
+              "implementFrom": "NPEICloud.OrderingService.Orders.IOrderAppService"
+            },
+            "GetListPagedAsyncByInput": {
+              "uniqueName": "GetListPagedAsyncByInput",
+              "name": "GetListPagedAsync",
+              "httpMethod": "GET",
+              "url": "api/ordering/order/paged",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "Volo.Abp.Application.Dtos.PagedAndSortedResultRequestDto, Volo.Abp.Ddd.Application.Contracts",
+                  "type": "Volo.Abp.Application.Dtos.PagedAndSortedResultRequestDto",
+                  "typeSimple": "Volo.Abp.Application.Dtos.PagedAndSortedResultRequestDto",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "Sorting",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "SkipCount",
+                  "jsonName": null,
+                  "type": "System.Int32",
+                  "typeSimple": "number",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "MaxResultCount",
+                  "jsonName": null,
+                  "type": "System.Int32",
+                  "typeSimple": "number",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                }
+              ],
+              "returnValue": {
+                "type": "Volo.Abp.Application.Dtos.PagedResultDto<NPEICloud.OrderingService.Orders.OrderDto>",
+                "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<NPEICloud.OrderingService.Orders.OrderDto>"
+              },
+              "allowAnonymous": false,
+              "implementFrom": "NPEICloud.OrderingService.Orders.IOrderAppService"
+            },
+            "GetDashboardAsyncByInput": {
+              "uniqueName": "GetDashboardAsyncByInput",
+              "name": "GetDashboardAsync",
+              "httpMethod": "GET",
+              "url": "api/ordering/order/dashboard",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "NPEICloud.OrderingService.Orders.DashboardInput, NPEICloud.OrderingService.Application.Contracts",
+                  "type": "NPEICloud.OrderingService.Orders.DashboardInput",
+                  "typeSimple": "NPEICloud.OrderingService.Orders.DashboardInput",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "Filter",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                }
+              ],
+              "returnValue": {
+                "type": "NPEICloud.OrderingService.Orders.DashboardDto",
+                "typeSimple": "NPEICloud.OrderingService.Orders.DashboardDto"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "NPEICloud.OrderingService.Orders.IOrderAppService"
+            },
+            "GetByOrderNoAsyncByOrderNo": {
+              "uniqueName": "GetByOrderNoAsyncByOrderNo",
+              "name": "GetByOrderNoAsync",
+              "httpMethod": "GET",
+              "url": "api/ordering/order/by-order-no",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "orderNo",
+                  "typeAsString": "System.Int32, System.Private.CoreLib",
+                  "type": "System.Int32",
+                  "typeSimple": "number",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "orderNo",
+                  "name": "orderNo",
+                  "jsonName": null,
+                  "type": "System.Int32",
+                  "typeSimple": "number",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "NPEICloud.OrderingService.Orders.OrderDto",
+                "typeSimple": "NPEICloud.OrderingService.Orders.OrderDto"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "NPEICloud.OrderingService.Orders.IOrderAppService"
+            },
+            "SetAsCancelledAsyncById": {
+              "uniqueName": "SetAsCancelledAsyncById",
+              "name": "SetAsCancelledAsync",
+              "httpMethod": "POST",
+              "url": "api/ordering/order/{id}/set-as-cancelled",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "id",
+                  "typeAsString": "System.Guid, System.Private.CoreLib",
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "id",
+                  "name": "id",
+                  "jsonName": null,
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "System.Void",
+                "typeSimple": "System.Void"
+              },
+              "allowAnonymous": false,
+              "implementFrom": "NPEICloud.OrderingService.Orders.IOrderAppService"
+            },
+            "SetAsShippedAsyncById": {
+              "uniqueName": "SetAsShippedAsyncById",
+              "name": "SetAsShippedAsync",
+              "httpMethod": "POST",
+              "url": "api/ordering/order/{id}/set-as-shipped",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "id",
+                  "typeAsString": "System.Guid, System.Private.CoreLib",
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "id",
+                  "name": "id",
+                  "jsonName": null,
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "System.Void",
+                "typeSimple": "System.Void"
+              },
+              "allowAnonymous": false,
+              "implementFrom": "NPEICloud.OrderingService.Orders.IOrderAppService"
+            },
+            "CreateAsyncByInput": {
+              "uniqueName": "CreateAsyncByInput",
+              "name": "CreateAsync",
+              "httpMethod": "POST",
+              "url": "api/ordering/order",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "NPEICloud.OrderingService.Orders.OrderCreateDto, NPEICloud.OrderingService.Application.Contracts",
+                  "type": "NPEICloud.OrderingService.Orders.OrderCreateDto",
+                  "typeSimple": "NPEICloud.OrderingService.Orders.OrderCreateDto",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "input",
+                  "jsonName": null,
+                  "type": "NPEICloud.OrderingService.Orders.OrderCreateDto",
+                  "typeSimple": "NPEICloud.OrderingService.Orders.OrderCreateDto",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Body",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "NPEICloud.OrderingService.Orders.OrderDto",
+                "typeSimple": "NPEICloud.OrderingService.Orders.OrderDto"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "NPEICloud.OrderingService.Orders.IOrderAppService"
+            }
+          }
+        }
+      }
+    }
+  },
+  "types": {}
+}

@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>NPEICloud.AdministrationService</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NPEICloud.AdministrationService.Application.Contracts\NPEICloud.AdministrationService.Application.Contracts.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.PermissionManagement.HttpApi.Client" Version="7.0.0" />
+    <PackageReference Include="Volo.Abp.SettingManagement.HttpApi.Client" Version="7.0.0" />
+  </ItemGroup>
+
+</Project>

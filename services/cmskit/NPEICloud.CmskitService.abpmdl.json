@@ -1,0 +1,58 @@
+{
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {}
+    }
+  },
+  "packages": {
+    "NPEICloud.CmskitService.Domain.Shared": {
+      "path": "src/NPEICloud.CmskitService.Domain.Shared/NPEICloud.CmskitService.Domain.Shared.abppkg.json",
+      "folder": "src"
+    },
+    "NPEICloud.CmskitService.Application.Contracts": {
+      "path": "src/NPEICloud.CmskitService.Application.Contracts/NPEICloud.CmskitService.Application.Contracts.abppkg.json",
+      "folder": "src"
+    },
+    "NPEICloud.CmskitService.Domain": {
+      "path": "src/NPEICloud.CmskitService.Domain/NPEICloud.CmskitService.Domain.abppkg.json",
+      "folder": "src"
+    },
+    "NPEICloud.CmskitService.Application": {
+      "path": "src/NPEICloud.CmskitService.Application/NPEICloud.CmskitService.Application.abppkg.json",
+      "folder": "src"
+    },
+    "NPEICloud.CmskitService.EntityFrameworkCore": {
+      "path": "src/NPEICloud.CmskitService.EntityFrameworkCore/NPEICloud.CmskitService.EntityFrameworkCore.abppkg.json",
+      "folder": "src"
+    },
+    "NPEICloud.CmskitService.HttpApi": {
+      "path": "src/NPEICloud.CmskitService.HttpApi/NPEICloud.CmskitService.HttpApi.abppkg.json",
+      "folder": "src"
+    },
+    "NPEICloud.CmskitService.HttpApi.Client": {
+      "path": "src/NPEICloud.CmskitService.HttpApi.Client/NPEICloud.CmskitService.HttpApi.Client.abppkg.json",
+      "folder": "src"
+    },
+    "NPEICloud.CmskitService.HttpApi.Host": {
+      "path": "src/NPEICloud.CmskitService.HttpApi.Host/NPEICloud.CmskitService.HttpApi.Host.abppkg.json",
+      "folder": "src"
+    },
+    "NPEICloud.CmskitService.Domain.Tests": {
+      "path": "test/NPEICloud.CmskitService.Domain.Tests/NPEICloud.CmskitService.Domain.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "NPEICloud.CmskitService.EntityFrameworkCore.Tests": {
+      "path": "test/NPEICloud.CmskitService.EntityFrameworkCore.Tests/NPEICloud.CmskitService.EntityFrameworkCore.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "NPEICloud.CmskitService.TestBase": {
+      "path": "test/NPEICloud.CmskitService.TestBase/NPEICloud.CmskitService.TestBase.abppkg.json",
+      "folder": "test"
+    },
+    "NPEICloud.CmskitService.Application.Tests": {
+      "path": "test/NPEICloud.CmskitService.Application.Tests/NPEICloud.CmskitService.Application.Tests.abppkg.json",
+      "folder": "test"
+    }
+  }
+}

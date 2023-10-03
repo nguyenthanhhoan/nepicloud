@@ -1,0 +1,107 @@
+name: NPEICloud
+services:
+# - name: auth-server
+#   project: apps/auth-server/src/NPEICloud.AuthServer/NPEICloud.AuthServer.csproj
+#   bindings:
+#     - protocol: https
+#       port: 44330
+#   env:
+#     - Kestrel__Certificates__Default__Path=../../../../etc/dev-cert/localhost.pfx
+#     - Kestrel__Certificates__Default__Password=8b6039b6-c67a-448b-977b-0ce6d3fcfd49
+
+- name: identity-service
+  project: services/identity/src/NPEICloud.IdentityService.HttpApi.Host/NPEICloud.IdentityService.HttpApi.Host.csproj
+  bindings:
+    - protocol: https
+      port: 44351
+  env:
+    - Kestrel__Certificates__Default__Path=../../../../etc/dev-cert/localhost.pfx
+    - Kestrel__Certificates__Default__Password=8b6039b6-c67a-448b-977b-0ce6d3fcfd49
+
+- name: administration-service
+  project: services/administration/src/NPEICloud.AdministrationService.HttpApi.Host/NPEICloud.AdministrationService.HttpApi.Host.csproj
+  bindings:
+    - protocol: https
+      port: 44353
+  env:
+    - Kestrel__Certificates__Default__Path=../../../../etc/dev-cert/localhost.pfx
+    - Kestrel__Certificates__Default__Password=8b6039b6-c67a-448b-977b-0ce6d3fcfd49
+
+- name: catalog-service
+  project: services/catalog/src/NPEICloud.CatalogService.HttpApi.Host/NPEICloud.CatalogService.HttpApi.Host.csproj
+  bindings:
+    - protocol: https
+      port: 44354
+  env:
+    - Kestrel__Certificates__Default__Path=../../../../etc/dev-cert/localhost.pfx
+    - Kestrel__Certificates__Default__Password=8b6039b6-c67a-448b-977b-0ce6d3fcfd49
+
+- name: basket-service
+  project: services/basket/src/NPEICloud.BasketService/NPEICloud.BasketService.csproj
+  bindings:
+    - protocol: https
+      port: 44355
+  env:
+    - Kestrel__Certificates__Default__Path=../../../../etc/dev-cert/localhost.pfx
+    - Kestrel__Certificates__Default__Password=8b6039b6-c67a-448b-977b-0ce6d3fcfd49
+
+- name: ordering-service
+  project: services/ordering/src/NPEICloud.OrderingService.HttpApi.Host/NPEICloud.OrderingService.HttpApi.Host.csproj
+  bindings:
+    - protocol: https
+      port: 44356
+  env:
+    - Kestrel__Certificates__Default__Path=../../../../etc/dev-cert/localhost.pfx
+    - Kestrel__Certificates__Default__Password=8b6039b6-c67a-448b-977b-0ce6d3fcfd49
+
+- name: payment-service
+  project: services/payment/src/NPEICloud.PaymentService.HttpApi.Host/NPEICloud.PaymentService.HttpApi.Host.csproj
+  bindings:
+    - protocol: https
+      port: 44357
+  env:
+    - Kestrel__Certificates__Default__Path=../../../../etc/dev-cert/localhost.pfx
+    - Kestrel__Certificates__Default__Password=8b6039b6-c67a-448b-977b-0ce6d3fcfd49
+  env_file:
+    - ./.env  
+  
+- name: cmskit-service
+  project: services/cmskit/src/NPEICloud.CmskitService.HttpApi.Host/NPEICloud.CmskitService.HttpApi.Host.csproj
+  bindings:
+    - protocol: https
+      port: 44358
+  env:
+    - Kestrel__Certificates__Default__Path=../../../../etc/dev-cert/localhost.pfx
+    - Kestrel__Certificates__Default__Password=8b6039b6-c67a-448b-977b-0ce6d3fcfd49
+  env_file:
+    - ./.env 
+
+- name: web-gateway
+  project: gateways/web/src/NPEICloud.WebGateway/NPEICloud.WebGateway.csproj
+  bindings:
+    - protocol: https
+      port: 44372
+  env:
+    - Kestrel__Certificates__Default__Path=../../../../etc/dev-cert/localhost.pfx
+    - Kestrel__Certificates__Default__Password=8b6039b6-c67a-448b-977b-0ce6d3fcfd49  
+
+- name: web-public-gateway
+  project: gateways/web-public/src/NPEICloud.WebPublicGateway/NPEICloud.WebPublicGateway.csproj
+  bindings:
+    - protocol: https
+      port: 44373
+  env:
+    - Kestrel__Certificates__Default__Path=../../../../etc/dev-cert/localhost.pfx
+    - Kestrel__Certificates__Default__Password=8b6039b6-c67a-448b-977b-0ce6d3fcfd49
+
+- name: public-web
+  project: apps/public-web/src/NPEICloud.PublicWeb/NPEICloud.PublicWeb.csproj
+  bindings:
+    - protocol: https
+      port: 44335
+  env:
+    - Kestrel__Certificates__Default__Path=../../../../etc/dev-cert/localhost.pfx
+    - Kestrel__Certificates__Default__Password=8b6039b6-c67a-448b-977b-0ce6d3fcfd49
+
+- name: keycloak-seeder
+  project: shared/NPEICloud.Keycloak.DbMigrator/NPEICloud.Keycloak.DbMigrator.csproj    
